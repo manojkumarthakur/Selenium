@@ -12,7 +12,7 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
+        <selenium.version>4.35.0</selenium.version>
     </properties>
 
     <dependencies>
@@ -27,7 +27,19 @@
             <version>7.11.0</version> <!-- Replace with the latest stable version -->
             <scope>test</scope>
         </dependency>
+
         <!-- Add other necessary dependencies like WebDriverManager if needed -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-grid</artifactId>
+            <version>${selenium.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.13.4</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
 

@@ -7,11 +7,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 import java.util.Set;
 
+// NoSuchWindowException if window is closed manually
+//  For handling native system windows (e.g., file upload dialogs), you need to use external tools like AutoIT or Robot class in Java.
 public class WindowHandles {
     public static void main(String[] args) throws Exception {
         WebDriver driver = new ChromeDriver();
-
-//        driver.get("https://selenium.dev");
 
         // implicit wait
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
@@ -49,6 +49,7 @@ public class WindowHandles {
             }
         }
         Thread.sleep(2000);
+        // NoSuchWindowException if window is closed manually
         driver.close();
         Thread.sleep(2000);
 // Step 7: After completing the Google login, switch back to the LinkedIn window
