@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="MySuite">
+    <test name="GroupedTests">
+        <groups>
+            <run>
+                <include name="smoke"/>
+                <include name="sanity"/>
+                <exclude name="database"/>
+            </run>
+        </groups>
+        <classes>
+<!--            <class name="org.manoj.testng.GroupsTest"/>-->
+            <class name="org.manoj.testng.GroupsTestWithOtherAnnotations"/>
+        </classes>
+    </test>
+</suite>

@@ -1,8 +1,21 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="MyTestSuite">
-    <test name="SampleTestCases">
+    <test name="SampleTestCases for Selenium">
         <classes>
-            <class name="org.manoj.hello.UsingSeleniumTestNg"/>
+<!--            <class name="org.manoj.hello.UsingSeleniumTestNg"/>-->
+        </classes>
+    </test>
+    <test name="SampleTestCases for testNG">
+        <classes>
+<!--            <class name="org.manoj.testng.TestNGAnnotationOrder"/>-->
+        </classes>
+    </test>
+    <parameter name="database" value="Oracle" />
+    <test name="MyTest using Parameter">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="url" value="https://example.com"/>
+        <classes>
+            <class name="org.manoj.testng.ParameterTest"/>
         </classes>
     </test>
 </suite>

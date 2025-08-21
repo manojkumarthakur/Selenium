@@ -1,0 +1,9 @@
+<!-- master_suite.xml -->
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="AllSuites">
+    <suite-files>
+        <suite-file path="executionSuite.xml"/>
+        <suite-file path="testng.xml"/>
+        <!-- Add more suite-file elements for other suites -->
+    </suite-files>
+</suite>
