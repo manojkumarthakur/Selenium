@@ -2,6 +2,7 @@ package pages;
 
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
@@ -29,10 +30,12 @@ public class MobileHomePage {
     WebElement we_searchButton;
 
     protected AppiumDriver driver;
+    public boolean isAndroid; // Use this and take actions for android and ios
 
     public MobileHomePage(AppiumDriver driver) {
         this.driver = driver;
         PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofSeconds(30)), this);
+        isAndroid = driver instanceof AndroidDriver;
     }
 
 
